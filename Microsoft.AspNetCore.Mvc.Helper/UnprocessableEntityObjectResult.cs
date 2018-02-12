@@ -3,9 +3,9 @@ using System;
 
 namespace Microsoft.AspNetCore.Mvc.Helper
 {
-    public class UnprocessedEntityObjectResult : ObjectResult
+    public class UnprocessableEntityObjectResult : ObjectResult
     {
-        public UnprocessedEntityObjectResult(ModelStateDictionary error) 
+        public UnprocessableEntityObjectResult(ModelStateDictionary error) 
             : base(new SerializableError(error))
         {
             if (error == null)
