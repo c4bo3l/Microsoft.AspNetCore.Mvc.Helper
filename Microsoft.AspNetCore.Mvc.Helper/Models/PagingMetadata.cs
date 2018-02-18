@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microsoft.AspNetCore.Mvc.Helper
 {
-    public class PagingMetada
+    public class PagingMetadata
     {
         public int TotalPages { get; set; }
         public int PageSize { get; set; }
