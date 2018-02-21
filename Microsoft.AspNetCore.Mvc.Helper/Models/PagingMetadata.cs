@@ -10,6 +10,7 @@ namespace Microsoft.AspNetCore.Mvc.Helper
         public int PageSize { get; set; }
         public int PageNumber { get; set; }
         public int TotalItems { get; set; }
+        public string CurrentPageLink { get; set; }
         public string PreviousPageLink { get; set; }
         public string NextPageLink { get; set; }
     }

@@ -37,6 +37,8 @@ namespace Microsoft.AspNetCore.Mvc.Helper
                 Enums.ResourceUriType.PreviousPage) : string.Empty;
             string nextPageLink = items.HasNextPage ? CreateResourceUri(actionAlias, param,
                 Enums.ResourceUriType.NextPage) : string.Empty;
+            string currentPageLink = items.HasNextPage ? CreateResourceUri(actionAlias, param,
+                Enums.ResourceUriType.CurrentPage) : string.Empty;
 
             return new PagingMetadata
             {
@@ -44,6 +46,7 @@ namespace Microsoft.AspNetCore.Mvc.Helper
                 TotalPages = items.TotalPages,
                 PageSize = items.PageSize,
                 PageNumber = items.PageNumber,
+                CurrentPageLink = currentPageLink,
                 PreviousPageLink = prevPageLink,
                 NextPageLink = nextPageLink
             };
